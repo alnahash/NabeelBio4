@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .video-card {
+            position: relative;
+            cursor: pointer;
+        }
+        .video-card img {
+            width: 100%;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .video-card:hover img {
+            transform: scale(1.05);
+        }
+        .video-title {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            background: #000;
+            border-radius: 10px;
+        }
+        .modal-content iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>بودكاست حجي</h2>
+
+    <div class="video-gallery">
+        <!-- Video 1 -->
+        <div class="video-card" onclick="openModal('https://www.youtube.com/embed/TqcsinPSVTI?si=ls7wetRRPSriy5tL')">
+            <img src="https://img.youtube.com/vi/TqcsinPSVTI/hqdefault.jpg" alt="Video 1 Thumbnail">
+            <p class="video-title">محمد حافظ رئيس فريق</p>
+        </div>
+
+        <!-- Video 2 -->
+       <div class="video-card" onclick="openModal('https://www.youtube.com/embed/TqcsinPSVTI?si=ls7wetRRPSriy5tL')">
+            <img src="https://img.youtube.com/vi/TqcsinPSVTI/hqdefault.jpg" alt="Video 1 Thumbnail">
+            <p class="video-title">محمد حافظ رئيس فريق</p>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card" onclick="openModal('https://www.youtube.com/embed/d357y8K9r2g?si=y9v2uwxO5cM2Doz_')">
+            <img src="https://img.youtube.com/vi/d357y8K9r2g/0.jpg" alt="Video 3 Thumbnail">
+            <p class="video-title">رِهام يوسف | العمل التطوعي هو اسلوب حياة</p>
+        </div>
+        <!-- Video 4 -->
+       <div class="video-card" onclick="openModal('https://www.youtube.com/embed/TqcsinPSVTI?si=ls7wetRRPSriy5tL')">
+            <img src="https://img.youtube.com/vi/TqcsinPSVTI/hqdefault.jpg" alt="Video 4 Thumbnail">
+            <p class="video-title">محمد حافظ رئيس فريق</p>
+        </div>
+        </div>
+ <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="videoFrame" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+
+     <script>
+        function openModal(videoUrl) {
+            document.getElementById("videoFrame").src = videoUrl + "&autoplay=1";
+            document.getElementById("videoModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("videoModal").style.display = "none";
+            document.getElementById("videoFrame").src = "";
+        }
+    </script>
+
+</body>
+</html>
