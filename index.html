@@ -10,6 +10,7 @@
         
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
+		
     <style>
         body {
             font-family: 'Cairo', sans-serif;
@@ -35,8 +36,8 @@
 						<li style="font-family: 'Cairo';"><a href="#intro">البداية</a></li>
 						<li style="font-family: 'Cairo';"><a href="#one">نبذه عن الكاتب</a></li>
 						<li style="font-family: 'Cairo';"><a href="#two">الاصدارات</a></li>
-						<li style="font-family: 'Cairo';"><a href="#work">معرض الصور</a></li>
-						<li style="font-family: 'Cairo';"><a href="#YouT">بودكاست</a></li>
+						<li style="font-family: 'Cairo';"><a href="#Youtube">مقتطفات</a></li>
+						<li style="font-family: 'Cairo';"><a href="#Spotify">بودكاست</a></li>
 						
 					</ul>
 				</nav>
@@ -95,10 +96,11 @@
                     
                     
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
+				<a href="#Youtube" class="button style2 down anchored">Next</a>
 			</section>
 
 		<!-- Work -->
+			<!-- 
 			<section id="work" class="main style3 primary">
 				<div class="content">
 					<header>
@@ -106,7 +108,7 @@
 						
 					</header>
 
-					<!-- Gallery  -->
+					 Gallery 
 						<div class="gallery">
 							<article class="from-left">
 								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
@@ -129,13 +131,35 @@
 						</div>
 
 				</div>
-				<a href="#YouT" class="button style2 down anchored">Next</a>	
-			</section>
+					
+			</section> -->
 
-		<section id="YouT">
-		<h2 style="font-family: 'Cairo'; margin-bottom:35px;">بودكاست حجي</h2>
-
-    <div class="video-gallery">
+    
+		<section id="Youtube">
+			<h2 style="font-family: 'Cairo'; margin-bottom:35px;">مقتطفات</h2>
+				<div class="video-gallery, video-card">
+					<div style="margin-bottom:50px;">
+						<iframe style="border-radius:12px" src="https://www.youtube.com/embed/6JdXj4XsVVM?si=n1urgqSakeZjULT7" width="624" height="351" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+					</div>
+				<div class="video-gallery, video-card">
+					<div style="margin-bottom:50px;">
+						<iframe style="border-radius:12px" src="https://www.youtube.com/embed/KPf95PpdCgU?si=vg_F1isOl62WJ1Dp" width="624" height="351" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+					</div>
+				</div>
+			</div>
+			<a href="#Spotify" class="button style2 down anchored">Next</a>
+		</section>	
+		
+			
+		<section id="Spotify">
+			<h2 style="font-family: 'Cairo'; margin-bottom:35px;">بودكاست حجي</h2>
+				<div class="video-gallery, video-card">
+					<div style="margin-bottom:50px;">
+						<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1kwJq7Cv0YHQGcuSHZ3P8o/video?utm_source=generator" width="624" height="351" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+					</div>
+				</div>
+			
+		</section>
       
 		<!-- 
         <div class="video-card" onclick="openModal('https://www.youtube.com/embed/TqcsinPSVTI?si=ls7wetRRPSriy5tL')">
@@ -160,20 +184,18 @@
             <p class="video-title" style="font-family: 'Cairo';">محمد حافظ رئيس فريق</p>
         </div>
 	-->
-		<div style="margin-bottom:50px;">
-			<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1kwJq7Cv0YHQGcuSHZ3P8o/video?utm_source=generator" width="624" height="351" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-		</div>
+		
 
 		
-        </div>
- <!-- Video Modal -->
+       
+ <!-- Video Modal 
     <div id="videoModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <iframe id="videoFrame" src="" allowfullscreen></iframe>
         </div>
     </div>
-
+ -->
      <script>
         function openModal(videoUrl) {
             document.getElementById("videoFrame").src = videoUrl + "&autoplay=1";
@@ -185,7 +207,7 @@
             document.getElementById("videoFrame").src = "";
         }
     </script>
-		</section>
+		
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -202,8 +224,8 @@
                         <li><a href="https://www.snapchat.com/add/nabeelisa" class="icon brands fa-snapchat"><span class="label">Snapchat</span></a></li>
                         <li><a href="https://www.instagram.com/nabeel3sa" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                         <li><a href="mailto:nabeel.isa@gmail.com" class="fa fa-envelope"><span class="label"></span></a></li>
+						<li><a href="https://open.spotify.com/show/1kwJq7Cv0YHQGcuSHZ3P8o" ><span class="fab fa-spotify"></span></a></li>
 					</ul>
-
 				<!-- Menu
 					<ul class="menu">
 						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
@@ -220,6 +242,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+		
 	</body>
 </html>
